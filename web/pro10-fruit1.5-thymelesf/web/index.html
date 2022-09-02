@@ -1,0 +1,99 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+
+    <style type="text/css">
+        * {
+            color: threeddarkshadow;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #808080;
+        }
+
+        div {
+            position: relative;
+            float: left;
+        }
+
+        #div_container {
+            width: 80%;
+            height: 100%;
+            border: 0px solid blue;
+            margin-left: 10%;
+            float: left;
+            background-color: honeydew;
+            border-radius: 8px;
+        }
+
+        #div_fruit_list {
+            width: 100%;
+            border: 0px solid red;
+        }
+
+        #tbl_fruit {
+            width: 60%;
+            line-height: 28px;
+            margin-top: 16px;
+            margin-left: 20%;
+        }
+
+        #tbl_fruit, #tbl_fruit tr, #tbl_fruit th, #tbl_fruit td {
+            border: 1px solid gray;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 16px;
+            font-family: "黑体";
+            font-weight: lighter;
+
+        }
+
+        .w20 {
+            width: 20%;
+        }
+
+        .delImg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .btn {
+            border: 1px solid lightgray;
+            width: 80px;
+            height: 24px;
+        }
+        .center{text-align: center;}
+        .f30{font-size:30px;}
+    </style>
+</head>
+<body>
+<div id="div_container">
+    <div id="div_fruit_list">
+        <p class="center f30">欢迎使用水果库存后台管理系统</p>
+        <table id="tbl_fruit">
+            <tr>
+                <th class="w20">名称</th>
+                <th class="w20">单价</th>
+                <th class="w20">库存</th>
+
+                <th>操作</th>
+            </tr>
+            <tr th:if="${#lists.isEmpty(session.fruitList)}">
+                <td colspan="4">对不起，库存为空</td>
+            </tr>
+            <tr th:unless="${#lists.isEmpty(session.fruitList)}" th:each="fruit:${session.fruitList}">
+                <td th:text="${fruit.fname}">苹果</td>
+                <td th:text="${fruit.price}">5</td>
+                <td th:text="${fruit.fcount}">20</td>
+
+                <td><img src="imgs/del.jpg" class="delImg"/></td>
+            </tr>
+
+        </table>
+
+    </div>
+</div>
+</body>
+</html>

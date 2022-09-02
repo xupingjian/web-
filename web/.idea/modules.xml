@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../pro01-javaweb/pro01-javaweb.iml" filepath="$PROJECT_DIR$/../pro01-javaweb/pro01-javaweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro09-fruit1.4-thymelesf/pro09-fruit1.4-thymelesf.iml" filepath="$PROJECT_DIR$/pro09-fruit1.4-thymelesf/pro09-fruit1.4-thymelesf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro10-fruit1.5-thymelesf/pro10-fruit1.5-thymelesf.iml" filepath="$PROJECT_DIR$/pro10-fruit1.5-thymelesf/pro10-fruit1.5-thymelesf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro11-fruit1.6-thymelesf/pro11-fruit1.6-thymelesf.iml" filepath="$PROJECT_DIR$/pro11-fruit1.6-thymelesf/pro11-fruit1.6-thymelesf.iml" />
+    </modules>
+  </component>
+</project>

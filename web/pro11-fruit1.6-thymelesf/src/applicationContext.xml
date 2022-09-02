@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<bean>
+    <bean id="fruitDAO" class="com.at.fruit.pojo.FruitDAOimpl"/>
+    <bean id="fruitService" class="com.at.fruit.service.impl.FruitServiceImpl">
+        <!--property标签用来表示属性，name表示属性名（FruitServiceImpl），ref表示引用其它（上面的bean标签）bean的id值，这样service与DAO层关系就建立好了-->
+        <property name="fruitDAO" ref="fruitDAO"/>
+    </bean>
+<!-- 这个bean标签的作用是将servletpath中涉及的名字对应的fruit,那么就要FruitController来处理   -->
+    <bean id="fruit" class="com.at.fruit.controllers.FruitController">
+        <!--property标签用来表示属性，name表示属性名（FruitC ontroller里的fruitService属性），ref表示引用其它（上一个的bean标签）bean的id值，这样service与Controller层关系就建立好了-->
+        <property name="fruitService" ref="fruitService"/>
+    </bean>
+</bean>
